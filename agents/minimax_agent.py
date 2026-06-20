@@ -7,6 +7,7 @@ class MinimaxAgent:
         size = game.size
         corners = [(0, 0), (0, size-1), (size-1, 0), (size-1, size-1)]
         
+        
         my_pieces, opp_pieces = 0, 0
         my_corners, opp_corners = 0, 0
 
@@ -68,6 +69,7 @@ class MinimaxAgent:
                     best_move = move
             return min_eval, best_move
 
+    
     def choose_move(self, game, player):
         _, move = self.minimax(game, self.depth, True, player)
         return move
